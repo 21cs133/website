@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Matching Validation</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+    </header>
+    <center>
+        <form onsubmit="return validateForm()" action="file:///D:/21cs133/day%2001/login.html">
+            <div class="container">
+                <h1 style="color:green"></h1>
+                <h3>LOGIN</h3>
+
+                <label for="Username">Username</label>
+                <input type="text" id="Username" required><br><br>
+
+                <label for="Password">Password</label>
+                <input type="password" id="Password" required><br><br>
+
+                <button type="submit">Submit</button>
+                <button type="reset" value="Reset">Reset</button>
+            </div>
+        </form>
+    </center>
+    <div class="footer-container">
+    
+    </div>
+    <script>
+        function validateForm() {
+            var username = document.getElementById('Username').value;
+            var password = document.getElementById('Password').value;
+
+            if (username === '21cs133' && password === 'Ragi@123') {
+                return true; // Form submission allowed if username and password match
+            } else {
+                alert('Invalid username or password. Please try again.');
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>
